@@ -1,13 +1,13 @@
 import cv2 
 
 
-for i in range (937) :
+for i in range (937) : # 937 is my dataset's amount
     try:
         count = int(i)
         print("\n\n\nImage" + str(count+1) + ".png\n\n\n")
-        imageNDArray = cv2.imread("C:/Users/user/Desktop/Dataset/Dataset/e-scooter_convert_to_PNG/Image" + str(count+1) +".png")
+        imageNDArray = cv2.imread("C:/Users/user/Desktop/Dataset/Dataset/e-scooter_convert_to_PNG/Image" + str(count+1) +".png") # path
         imageHeight, imageWidth = imageNDArray.shape[:2]
-        if imageWidth > imageHeight :
+        if imageWidth > imageHeight :               
             if imageWidth <=512 :
                 convert = 512/imageWidth
             else :
